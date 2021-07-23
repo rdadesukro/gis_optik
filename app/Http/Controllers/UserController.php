@@ -26,7 +26,7 @@ class UserController extends Controller
             $credentials = request(['username', 'password']);
             if(!Auth::attempt($credentials))
                 return response()->json([
-                    'message' => 'Email atau Password Salah',
+                    'message' => 'Username atau Password Salah',
                     'kode'=> '0'
                 ]);
 
@@ -42,6 +42,7 @@ class UserController extends Controller
                     'access_token' => $tokenResult->accessToken,
                     'token_type' => 'Bearer',
                     'kode'=> '1',
+                    'email'=> Auth::user()->email,
                     'nama'=>Auth::user()->name,
                     'role'=> Auth::user()->role,
                     'user_id'=> Auth::user()->id,
