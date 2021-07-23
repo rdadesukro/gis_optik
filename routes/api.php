@@ -31,13 +31,14 @@ Route::group(['prefix' => 'auth'], function () {
      //pemilik
         Route::post('add_optik', 'OptikController@add_optik');
         Route::post('edit_optik', 'OptikController@edit_optik');
-        Route::post('hapus_lapangan', 'LapanganController@hapus_lapangan');
+        Route::post('hapus_optik', 'OptikController@hapus_optik');
+        Route::post('hapus_foto', 'FotoController@hapus_foto');
        
        // Route::post('get_data_jenis', 'LapanganController@get_data_lapangan_pemilik');
         Route::post('add_jenis', 'JenisController@add_jenis');
         Route::post('edit_jenis', 'JenisController@edit_jenis');
         Route::post('edit_foto', 'FotoController@edit_foto');
-        Route::post('add_foto', 'FotoController@add_foto');
+        Route::post('add_foto', 'OptikController@hapus_foto');
        
  
      //user

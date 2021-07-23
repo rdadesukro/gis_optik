@@ -139,7 +139,7 @@ class OptikController extends Controller
       ]);
   }
   $fileName = time() . ".jpg";
-  $path = public_path() . '/foto_lapangan/';
+  $path = public_path() . '/foto_optik/';
   $file->move($path, $fileName);
 
 
@@ -205,16 +205,14 @@ public function get_detail_optik(Request $request){
 
 }
 
-public function hapus_lapangan(Request $request){
+public function hapus_optik(Request $request){
     $id = $request->id;
 
 
     DB::beginTransaction();
     try{
-        $lapangan = Lapangan::where('id',$id);
-        $jenis = Jenis::where('lapangan_id',$id);
+        $lapangan = Optik::where('id',$id);
         $lapangan->delete();
-        $jenis->delete();
         $message = "Berhasil Hapus Data";
         $kode = "1";
 

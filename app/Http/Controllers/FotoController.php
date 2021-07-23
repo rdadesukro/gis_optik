@@ -140,6 +140,33 @@ public function get_foto(Request $request){
      ], 200);
   
   }
+  public function hapus_foto(Request $request){
+    $id = $request->id;
+
+
+    DB::beginTransaction();
+    try{
+        $lapangan = Foto::where('id',$id);
+        $lapangan->delete();
+        $message = "Berhasil Hapus Data";
+        $kode = "1";
+
+        DB::commit();
+    }catch (\Exception $e){
+   dd($e);
+        DB::rollback();
+        $message = "Gagal Hapus Data";
+        $kode = "0";
+    }
+
+    return response()->json([
+        'message' => $message,
+        'kode' => $kode
+    ]);
+
+
+}
+
   
 
 }
