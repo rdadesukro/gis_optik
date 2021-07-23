@@ -38,19 +38,13 @@ Route::group(['prefix' => 'auth'], function () {
         Route::post('add_jenis', 'JenisController@add_jenis');
         Route::post('edit_jenis', 'JenisController@edit_jenis');
         Route::post('edit_foto', 'FotoController@edit_foto');
-        Route::post('add_foto', 'OptikController@hapus_foto');
+        Route::post('add_foto', 'FotoController@add_foto');
        
  
-     //user
-       Route::post('add_komentar', 'KomentarController@add_komentar');
-       Route::post('add_raiting', 'RaitingController@add_raiting');
-      
-       Route::post('get_data_jenis', 'JenisController@get_data_jenis');
- 
-       Route::post("edit_no_hp",'UserController@edit_nohp');
+   
        Route::get('logout', 'UserController@logout');
        Route::post('edit_pass','UserController@update_password');
-       Route::post('edit_foto_profil','UserController@edit_foto');
+
        Route::post('get_data_user','UserController@get_data_user');
  
  
