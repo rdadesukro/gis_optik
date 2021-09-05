@@ -16,6 +16,7 @@ class OptikController extends Controller
        $nama_optik = $request->nama_optik;
        $alamat = $request->alamat;
        $phone = $request->phone;
+       $asuransi = $request->asuransi;
        $lat = $request->lat;
        $lng = $request->lng;
        $status=$request->status;
@@ -68,6 +69,7 @@ class OptikController extends Controller
         $lapangan->informasi =$informasi;
         $lapangan->status =$status;
         $lapangan->status_bpjs =$status_bpjs;
+        $lapangan->asuransi =$asuransi;
         
         $lapangan->save();
 
@@ -92,6 +94,7 @@ class OptikController extends Controller
     $nama_optik = $request->nama_optik;
     $id = $request->id;
     $alamat = $request->alamat;
+    $asuransi = $request->asuransi;
     $phone = $request->phone;
     $lat = $request->lat;
     $lng = $request->lng;
@@ -121,6 +124,7 @@ class OptikController extends Controller
     $lapangan->informasi =$informasi;
     $lapangan->status =$status;
     $lapangan->status_bpjs =$status_bpjs;
+    $lapangan->asuransi =$asuransi;
         
     $lapangan->save();
 
@@ -158,6 +162,7 @@ class OptikController extends Controller
         $lapangan->informasi =$informasi;
         $lapangan->status =$status;
         $lapangan->status_bpjs =$status_bpjs;
+        $lapangan->asuransi =$asuransi;
         
      $lapangan->save();
 

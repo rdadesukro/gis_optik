@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Optik extends Model
 {
     //protected $guarded = [];
-    protected $fillable = ['nama','nama_panggilan','status','ucapan','baca'];
+    protected $fillable = ['nama','nama_panggilan','status','ucapan','baca','asuransi'];
 
     protected $table = 'optiks';
 
